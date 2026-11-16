@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aishwarya K S | Fresher in IT · Python &amp; SQL</title>
+<meta name="description" content="Portfolio of Aishwarya K S, a B.Com graduate from Madikeri starting a career in IT with Python, SQL and banking operations experience.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E💻%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#eef2f7; --card:#ffffff; --ink:#14213d; --muted:#51607a; --line:#d5dce8;
+  --cobalt:#2f5bea; --amber:#e39b00; --mint:#0f8a6a; --console:#14213d; --console-ink:#dfe7f7;
+  --radius:14px;
+}
+[data-theme="dark"]{
+  --paper:#0f1626; --card:#172036; --ink:#eaf0fb; --muted:#9db0cf; --line:#2a3858;
+  --cobalt:#7a9bff; --amber:#ffb829; --mint:#43d1a6; --console:#0a101d; --console-ink:#dfe7f7;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:'IBM Plex Sans',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;transition:background .4s,color .4s}
+h1,h2,h3{font-family:'Bricolage Grotesque','IBM Plex Sans',sans-serif;line-height:1.1;letter-spacing:-.02em}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+section{padding:88px 0}
+h2{font-size:clamp(1.9rem,4vw,2.6rem);margin-bottom:12px}
+.lede{color:var(--muted);max-width:60ch;margin-bottom:40px}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:6px}
+
+/* progress + nav */
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--cobalt),var(--amber));z-index:100}
+nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:'Bricolage Grotesque';font-weight:800;font-size:1.15rem;text-decoration:none}
+.logo b{color:var(--cobalt)}
+.links{display:flex;gap:6px;align-items:center}
+.links a{font-size:.92rem;text-decoration:none;color:var(--muted);padding:6px 12px;border-radius:99px;transition:background .25s,color .25s}
+.links a:hover,.links a.on{background:var(--card);color:var(--ink)}
+#theme,#menu{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:99px;width:38px;height:38px;cursor:pointer;font-size:1rem;transition:transform .3s}
+#theme:hover{transform:rotate(25deg)}
+#menu{display:none}
+
+/* hero */
+.hero{padding:72px 0 56px}
+.hero .grid{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center}
+.status{display:inline-flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);padding:6px 14px;border-radius:99px;font-size:.88rem;margin-bottom:22px}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--mint);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--mint) 60%,transparent)}100%{box-shadow:0 0 0 12px transparent}}
+h1{font-size:clamp(2.6rem,6.5vw,4.6rem);font-weight:800}
+.hero p.sub{font-size:1.15rem;color:var(--muted);margin:20px 0 30px;max-width:46ch}
+.hero-in{opacity:0;transform:translateY(22px);animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards}
+.hero-in:nth-child(2){animation-delay:.12s}.hero-in:nth-child(3){animation-delay:.24s}.hero-in:nth-child(4){animation-delay:.36s}
+@keyframes rise{to{opacity:1;transform:none}}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 24px;border-radius:99px;font-weight:500;text-decoration:none;border:2px solid var(--ink);transition:transform .25s,background .25s,color .25s,box-shadow .25s}
+.btn.main{background:var(--ink);color:var(--paper)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 24px -10px var(--cobalt)}
+.btn.main:hover{background:var(--cobalt);border-color:var(--cobalt);color:#fff}
+
+/* console */
+.console{background:var(--console);color:var(--console-ink);border-radius:var(--radius);box-shadow:0 30px 60px -30px rgba(20,33,61,.55);overflow:hidden;font-family:'IBM Plex Mono',monospace;font-size:.84rem}
+.console header{display:flex;align-items:center;gap:7px;padding:11px 14px;background:rgba(255,255,255,.06)}
+.console header i{width:11px;height:11px;border-radius:50%;background:#ff6159}
+.console header i:nth-child(2){background:#ffbd2e}.console header i:nth-child(3){background:#28c941}
+.console header span{margin-left:auto;opacity:.6;font-size:.76rem}
+#sql{padding:18px 18px 8px;min-height:112px;white-space:pre-wrap}
+.k{color:#8fb0ff}.s{color:#ffd37a}.c{color:#6e809f}
+.caret{display:inline-block;width:8px;height:1em;background:#ffd37a;vertical-align:-2px;animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+#out{padding:4px 18px 14px;min-height:178px}
+#out .row{display:flex;gap:10px;padding:5px 0;border-top:1px dashed rgba(255,255,255,.14);opacity:0;transform:translateX(-12px);transition:opacity .45s,transform .45s}
+#out .row.show{opacity:1;transform:none}
+#out .row b{flex:0 0 96px;color:#8fb0ff;font-weight:500}
+.run{display:flex;justify-content:space-between;align-items:center;padding:10px 18px 14px}
+.run small{color:#6e809f}
+.run button{font:inherit;background:var(--amber);color:#14213d;border:0;border-radius:8px;padding:7px 14px;cursor:pointer;font-weight:500;transition:transform .2s}
+.run button:hover{transform:scale(1.06)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+
+/* cards */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+.about{display:grid;grid-template-columns:1.3fr 1fr;gap:28px}
+.facts{list-style:none}
+.facts li{display:flex;justify-content:space-between;gap:14px;padding:10px 0;border-bottom:1px solid var(--line);font-size:.95rem}
+.facts li:last-child{border:0}.facts span{color:var(--muted)}
+.facts b{font-weight:500;text-align:right}
+.about p+p{margin-top:14px}
+
+/* skills */
+.skills{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.bar{margin-bottom:20px}
+.bar div.top{display:flex;justify-content:space-between;font-size:.95rem;margin-bottom:7px}
+.bar div.top em{font-style:normal;color:var(--muted);font-size:.85rem}
+.track{height:9px;border-radius:99px;background:var(--line);overflow:hidden}
+.fill{height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,var(--cobalt),var(--amber));transition:width 1.3s cubic-bezier(.2,.7,.2,1)}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:6px}
+.chip{border:1px solid var(--line);background:var(--paper);padding:6px 14px;border-radius:99px;font-size:.88rem;transition:transform .2s,border-color .2s}
+.chip:hover{transform:translateY(-3px);border-color:var(--cobalt)}
+.road{list-style:none;margin-top:10px;position:relative;padding-left:26px}
+.road:before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.road li{position:relative;padding:6px 0;font-size:.95rem}
+.road li:before{content:"";position:absolute;left:-26px;top:13px;width:10px;height:10px;border-radius:50%;background:var(--card);border:2px solid var(--cobalt)}
+.road li.now:before{background:var(--amber);border-color:var(--amber)}
+
+/* timeline */
+.tl{position:relative;padding-left:34px}
+.tl:before{content:"";position:absolute;left:9px;top:8px;bottom:0;width:2px;background:var(--line)}
+.tl .card:before{content:"";position:absolute;left:-33px;top:32px;width:14px;height:14px;border-radius:50%;background:var(--amber);border:3px solid var(--paper)}
+.tl .card{position:relative;margin-bottom:22px}
+.tl h3{font-size:1.4rem}.tl .meta{color:var(--muted);font-size:.92rem;margin:4px 0 18px}
+.map{display:grid;grid-template-columns:1fr 1fr;gap:10px 28px}
+.map div{font-size:.93rem;padding:9px 0;border-top:1px solid var(--line)}
+.map span{display:block;color:var(--muted)}
+.map b{font-weight:500;color:var(--cobalt)}
+
+/* projects */
+.proj{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:20px}
+.proj .card{transition:transform .35s,border-color .35s,box-shadow .35s}
+.proj .card:hover{transform:translateY(-6px) rotate(-.4deg);border-color:var(--cobalt);box-shadow:0 22px 34px -22px var(--cobalt)}
+.proj h3{font-size:1.15rem;margin:10px 0 8px}.proj p{color:var(--muted);font-size:.93rem}
+.tag{display:inline-block;font-size:.78rem;padding:3px 10px;border-radius:99px;background:color-mix(in srgb,var(--amber) 22%,transparent)}
+.tech{margin-top:14px;font-family:'IBM Plex Mono',monospace;font-size:.8rem;color:var(--cobalt)}
+
+/* education + interests */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.big{font-size:1.5rem;font-family:'Bricolage Grotesque';font-weight:700;margin:6px 0}
+.ok{color:var(--mint);font-weight:500}
+
+/* contact */
+.contact{text-align:center}
+.contact .card{padding:54px 28px;background:var(--ink);color:var(--paper);border:0}
+.contact h2{color:var(--paper)}
+.contact p{max-width:52ch;margin:0 auto 30px;opacity:.82}
+.contact .btn{border-color:var(--paper);color:var(--paper);margin:5px}
+.contact .btn.main{background:var(--amber);border-color:var(--amber);color:#14213d}
+.contact .btn:hover{background:var(--paper);color:var(--ink)}
+footer{text-align:center;color:var(--muted);font-size:.88rem;padding:28px 0 44px}
+#top{position:fixed;right:20px;bottom:20px;width:44px;height:44px;border-radius:50%;border:0;background:var(--cobalt);color:#fff;font-size:1.1rem;cursor:pointer;opacity:0;transform:translateY(16px);pointer-events:none;transition:.3s}
+#top.vis{opacity:1;transform:none;pointer-events:auto}
+
+@media(max-width:860px){
+  .hero .grid,.about,.skills,.two,.map{grid-template-columns:1fr}
+  #menu{display:block}
+  .links{position:absolute;top:64px;left:0;right:0;flex-direction:column;background:var(--paper);border-bottom:1px solid var(--line);padding:12px;display:none}
+  .links.open{display:flex}
+  section{padding:64px 0}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  html{scroll-behavior:auto}.rv,.hero-in{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#home">Aishwarya<b>.</b>KS</a>
+    <div class="links" id="links">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a>
+      <a href="#projects">Projects</a><a href="#education">Education</a><a href="#contact">Contact</a>
+      <button id="theme" aria-label="Toggle light and dark theme">🌙</button>
+    </div>
+    <button id="menu" aria-label="Open menu">☰</button>
+  </div>
+</nav>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="wrap grid">
+    <div>
+      <div class="status hero-in"><span class="dot"></span>Open to IT internships and entry-level roles</div>
+      <h1 class="hero-in">Aishwarya K S</h1>
+      <p class="sub hero-in">A B.Com graduate from Madikeri starting my IT career with Python, SQL and hands-on banking operations experience.</p>
+      <div class="btns hero-in">
+        <a class="btn main" href="#projects">See my work</a>
+        <a class="btn" href="#contact">Contact me</a>
+      </div>
+    </div>
+    <div class="console hero-in" aria-label="Animated SQL query describing Aishwarya">
+      <header><i></i><i></i><i></i><span>profile.sql</span></header>
+      <div id="sql" aria-live="polite"></div>
+      <div id="out"></div>
+      <div class="run"><small id="msg">Ready</small><button id="rerun">Run query again</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <h2 class="rv">From commerce to code</h2>
+    <p class="lede rv">I understand how money, customers and records move through a bank. Now I am learning to build and query the systems behind them.</p>
+    <div class="about">
+      <div class="card rv">
+        <p>I am a motivated, hardworking fresher who completed my B.Com and then interned at India Post Payments Bank. Working with real customers taught me accuracy, patience and clear communication.</p>
+        <p>I am now building a base in Python and SQL, and I am curious about digital marketing, new technologies and financial services. I learn quickly, and I am looking for a reputed organisation where I can contribute and grow.</p>
+      </div>
+      <ul class="facts card rv">
+        <li><span>Location</span><b>Madikeri, Karnataka</b></li>
+        <li><span>Degree</span><b>B.Com (General)</b></li>
+        <li><span>Experience</span><b>Intern, IPPB</b></li>
+        <li><span>Focus</span><b>Python · SQL · Data</b></li>
+        <li><span>Availability</span><b class="ok">Open to work</b></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="wrap">
+    <h2 class="rv">Skills</h2>
+    <p class="lede rv">Levels are honest: I am a fresher, and every bar below is still growing.</p>
+    <div class="skills">
+      <div class="card rv">
+        <div class="bar"><div class="top"><span>Basic computer knowledge</span><em>Intermediate</em></div><div class="track"><div class="fill" data-w="75"></div></div></div>
+        <div class="bar"><div class="top"><span>Python programming</span><em>Beginner</em></div><div class="track"><div class="fill" data-w="45"></div></div></div>
+        <div class="bar"><div class="top"><span>SQL</span><em>Beginner</em></div><div class="track"><div class="fill" data-w="45"></div></div></div>
+        <div class="bar"><div class="top"><span>Customer communication</span><em>Intermediate</em></div><div class="track"><div class="fill" data-w="75"></div></div></div>
+        <h3 style="font-size:1.05rem;margin:26px 0 12px">Personal strengths</h3>
+        <div class="chips"><span class="chip">Hardworking</span><span class="chip">Patient</span><span class="chip">Confident</span><span class="chip">Quick learner</span><span class="chip">Positive attitude</span></div>
+      </div>
+      <div class="card rv">
+        <h3 style="font-size:1.25rem">Learning roadmap</h3>
+        <ul class="road">
+          <li class="now">Python fundamentals (in progress)</li>
+          <li class="now">SQL queries: SELECT, JOIN, GROUP BY (in progress)</li>
+          <li>Git and GitHub workflow</li>
+          <li>Data analysis with Excel and Pandas</li>
+          <li>Dashboards with Power BI or Tableau</li>
+          <li>Marketing and banking data analytics</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="wrap">
+    <h2 class="rv">Experience</h2>
+    <p class="lede rv">Banking operations taught me to handle sensitive data carefully. Those habits carry straight into IT work.</p>
+    <div class="tl">
+      <div class="card rv">
+        <h3>Intern, Customer Relationship and Banking Operations</h3>
+        <div class="meta">India Post Payments Bank (IPPB)</div>
+        <div class="map">
+          <div><span>What I did</span><b>Opened bank accounts</b></div>
+          <div><span>What it taught me for IT</span>Following a process step by step</div>
+          <div><span>What I did</span><b>Aadhaar seeding and nominee updates</b></div>
+          <div><span>What it taught me for IT</span>Data accuracy and record updates</div>
+          <div><span>What I did</span><b>Customer phone calls and support</b></div>
+          <div><span>What it taught me for IT</span>Clear communication, user support</div>
+          <div><span>What I did</span><b>Merchant QR code distribution</b></div>
+          <div><span>What it taught me for IT</span>Digital payments and onboarding</div>
+          <div><span>What I did</span><b>Travel insurance applications</b></div>
+          <div><span>What it taught me for IT</span>Handling forms and customer data</div>
+          <div><span>Result</span><b>Stronger interpersonal skills</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="wrap">
+    <h2 class="rv">Projects</h2>
+    <p class="lede rv">I am building my portfolio now. These are my planned projects, each tied to my commerce background.</p>
+    <div class="proj">
+      <div class="card rv"><span class="tag">Planned</span><h3>Personal finance tracker</h3><p>Record income and expenses, then print a monthly summary.</p><div class="tech">Python</div></div>
+      <div class="card rv"><span class="tag">Planned</span><h3>Bank customer data queries</h3><p>Practise SQL on a sample banking database: accounts, nominees and transactions.</p><div class="tech">SQL</div></div>
+      <div class="card rv"><span class="tag">Planned</span><h3>Accounting calculators</h3><p>GST, simple interest and EMI calculators built from my B.Com syllabus.</p><div class="tech">Python</div></div>
+      <div class="card rv"><span class="tag">Planned</span><h3>Campaign data dashboard</h3><p>Analyse sample digital marketing data and show the results in charts.</p><div class="tech">Python · SQL</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="wrap">
+    <h2 class="rv">Education and interests</h2>
+    <p class="lede rv">&nbsp;</p>
+    <div class="two">
+      <div class="card rv">
+        <div class="meta" style="color:var(--muted)">Kodagu University</div>
+        <div class="big">Bachelor of Commerce (B.Com, General)</div>
+        <p>Field Marshal K M Cariappa College, Madikeri</p>
+        <p class="ok" style="margin-top:10px">Completed</p>
+      </div>
+      <div class="card rv">
+        <h3 style="margin-bottom:14px">Areas of interest</h3>
+        <div class="chips"><span class="chip">Digital marketing</span><span class="chip">New technologies</span><span class="chip">Banking and financial services</span></div>
+        <h3 style="margin:24px 0 14px">Hobbies</h3>
+        <div class="chips"><span class="chip">🎵 Music</span><span class="chip">📖 Reading</span><span class="chip">🧠 Learning new things</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="card rv">
+      <h2>Let's work together</h2>
+      <p>I am looking for an IT internship or entry-level role where I can learn fast and contribute from day one.</p>
+      <!-- TODO: replace the placeholders below with your real details -->
+      <a class="btn main" href="mailto:your.email@example.com">your.email@example.com</a>
+      <a class="btn" href="tel:+910000000000">[Your Phone Number]</a>
+      <a class="btn" href="https://www.linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>© <span id="yr"></span> Aishwarya K S · Madikeri, Karnataka</footer>
+<button id="top" aria-label="Back to top">↑</button>
+
+<script>
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+$('#yr').textContent=new Date().getFullYear();
+
+/* theme */
+const root=document.documentElement, tbtn=$('#theme');
+try{const t=localStorage.getItem('theme');if(t)root.dataset.theme=t;else if(matchMedia('(prefers-color-scheme: dark)').matches)root.dataset.theme='dark'}catch(e){}
+const sync=()=>tbtn.textContent=root.dataset.theme==='dark'?'☀️':'🌙';sync();
+tbtn.onclick=()=>{root.dataset.theme=root.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('theme',root.dataset.theme)}catch(e){}sync()};
+
+/* mobile menu */
+$('#menu').onclick=()=>$('#links').classList.toggle('open');
+$$('#links a').forEach(a=>a.addEventListener('click',()=>$('#links').classList.remove('open')));
+
+/* console: typed SQL, then result rows */
+const query=[
+ ['k','SELECT'],['',' name, degree, internship, skills\n'],
+ ['k','FROM'],['',' candidates\n'],
+ ['k','WHERE'],['',' location = '],['s',"'Madikeri'"],['k',' AND'],['',' status = '],['s',"'open_to_work'"],['',';']
+];
+const result=[['name','Aishwarya K S'],['degree','B.Com (General)'],['internship','IPPB, banking ops'],['skills','Python, SQL, Excel basics'],['status','Ready to learn and ship']];
+let token=0;
+async function runQuery(){
+  const my=++token, sql=$('#sql'), out=$('#out'), msg=$('#msg');
+  sql.innerHTML='';out.innerHTML='';msg.textContent='Running…';
+  const caret=document.createElement('span');caret.className='caret';sql.appendChild(caret);
+  for(const [cls,text] of query){
+    const span=document.createElement('span');if(cls)span.className=cls;sql.insertBefore(span,caret);
+    for(const ch of text){if(my!==token)return;span.textContent+=ch;if(!reduce)await new Promise(r=>setTimeout(r,22))}
+  }
+  caret.remove();
+  for(const [k,v] of result){
+    if(my!==token)return;
+    const row=document.createElement('div');row.className='row';row.innerHTML='<b>'+k+'</b><span>'+v+'</span>';out.appendChild(row);
+    requestAnimationFrame(()=>row.classList.add('show'));
+    if(!reduce)await new Promise(r=>setTimeout(r,260));
+  }
+  msg.textContent='1 row returned';
+}
+$('#rerun').onclick=runQuery;
+setTimeout(runQuery,reduce?0:700);
+
+/* reveal on scroll + skill bars */
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;
+  e.target.classList.add('in');
+  $$('.fill',e.target).forEach(f=>f.style.width=f.dataset.w+'%');
+  io.unobserve(e.target);
+}),{threshold:.15});
+$$('.rv').forEach((el,i)=>{el.style.transitionDelay=(i%3)*90+'ms';io.observe(el)});
+
+/* scroll progress, back-to-top, active nav link */
+const secs=$$('main section[id]'), navA=$$('#links a');
+addEventListener('scroll',()=>{
+  const h=document.documentElement,p=h.scrollTop/(h.scrollHeight-h.clientHeight);
+  $('#bar').style.width=(p*100)+'%';
+  $('#top').classList.toggle('vis',h.scrollTop>600);
+  let cur='';secs.forEach(s=>{if(s.getBoundingClientRect().top<140)cur=s.id});
+  navA.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+cur));
+},{passive:true});
+$('#top').onclick=()=>scrollTo({top:0,behavior:reduce?'auto':'smooth'});
+</script>
+</body>
+</html>
